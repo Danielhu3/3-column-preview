@@ -77,6 +77,8 @@ main{
   background-color: var(--orange);
   grid-area: card-sedans;
 
+  border-radius: 2rem 0 0 2rem;
+
 }
 
 .card-suvs{
@@ -87,6 +89,8 @@ main{
 .card-luxury{
   background-color: var(--very-dark-cyan);
   grid-area: card-luxury;
+
+  border-radius: 0 2rem 2rem 0;
 }
 
 
