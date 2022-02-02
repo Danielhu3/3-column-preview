@@ -43,6 +43,10 @@ body{
   grid-template-areas: ". . . . ."
                         ". main main main ."
                         "footer footer footer footer footer";
+
+                        
+
+                        
 }
 
 
@@ -63,14 +67,16 @@ main{
   
   grid-template-areas: "card-sedans card-suvs card-luxury";
 
+  
+
 }
 
 .card-sedans, .card-suvs, .card-luxury{
   display: flex;
   flex-direction: column;
-
   
 
+  
 }
 
 .card-sedans{
@@ -118,8 +124,10 @@ main{
   border: none;
   border-radius:5rem ;
 
-  margin: 0 auto 3.2rem 3.2rem;
   padding: 1.6rem 3.2rem; 
+  margin: auto 3.2rem 3.2rem 3.2rem;
+  
+  
 
   background-color: var(--light-gray);
 
@@ -154,6 +162,8 @@ footer{
   font-size: 1.1rem;
   color: black;
   text-align: center;
+
+  margin-top: 1.6rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -167,6 +177,138 @@ footer{
   border: 0.2rem solid var(--light-gray);
 }
 
-
-
 /* End of active state */
+
+@media only screen and (max-width: 900px) {
+  .container{
+   
+    align-items: center;
+    
+  }
+  
+}
+
+
+@media only screen and (max-width: 860px) {
+  html{
+    font-size: 60%;
+  }
+
+  main{
+    width: 90vw;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+ 
+
+  
+  html{
+    font-size: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+  
+
+  body{
+    width: 90vw;
+  }
+  main{
+    width: 85vw;
+  }
+
+
+}
+
+/* mobile */
+@media only screen and (max-width: 375px){  
+
+  body{
+    width: 100vw;
+    
+  }
+  main{
+    width: 80vw;
+    height: 100vh;
+    align-self: center;
+    
+  }
+
+  
+ 
+  .container {
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 5vh 30vh 30vh 30vh 5vh;
+  
+    grid-template-areas: ". . ."
+                          ". main ."
+                          ". main ."
+                          ". main ."
+                          "footer footer footer";
+                          
+  }
+
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 34vh 33vh 33vh;
+    grid-template-areas: "card-sedans"
+                          "card-suvs"
+                          "card-luxury";
+
+  }
+
+  .card-sedans, .card-suvs, .card-luxury{
+    flex-direction: column;
+    
+  }
+
+  .card-sedans{
+      border-radius: 2rem 2rem 0 0;
+      
+  }
+
+  .card-luxury{
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .card-image, .card-title, .card-text, .learn-more{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .card-image{
+    
+    margin: 3.2rem auto 3.2rem 3.2rem;
+  }
+
+  .card-title{
+    margin: 0 auto 3.2rem 3.2rem;
+  }
+
+  .card-text{
+    margin: 0 auto 3.2rem 3.2rem;
+
+  }
+
+  .learn-more{
+    margin: 0 auto 3.2rem 3.2rem;
+    padding: 1.6rem 3.2rem; 
+  }
+
+
+  .attribution{
+    display: none;
+  }
+  
+
+
+}
