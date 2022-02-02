@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+
+  /*Transparent white (paragraphs)*/
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /*Very light gray (background, headings, buttons)*/
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+
+}
+
+body{
+  font-size: 1.5rem;
+  background-color: var(--light-gray);
+  color: var(--transparent-white);
+
+  font-family: 'Lexend Deca', sans-serif;;
+  font-weight: 400;
+
+  height: 100vh;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 80vh 10vh;
+
+  grid-template-areas: ". . . . ."
+                        ". main main main ."
+                        "footer footer footer footer footer";
+}
+
+
+main{
+  /* remover background color */
+  background-color: red;
+  grid-area: main;
+
+  
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+  
+  grid-template-areas: "card-sedans card-suvs card-luxury";
+
+}
+
+.card-sedans, .card-suvs, .card-luxury{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card-sedans{
+  background-color: var(--orange);
+  grid-area: card-sedans;
+
+}
+
+.card-suvs{
+  background-color: var(--dark-cyan);
+  grid-area: card-suvs;
+}
+
+.card-luxury{
+  background-color: var(--very-dark-cyan);
+  grid-area: card-luxury;
+}
+
+
+
+
+.card-image{
+  margin: 3.2rem auto 3.2rem 3.2rem;
+}
+
+.card-title{
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  color: var(--light-gray);
+  margin: 0 auto 3.2rem 3.2rem;
+
+}
+
+.card-text{
+ 
+  margin: 0 3.2rem 6.4rem 3.2rem;
+
+}
+
+.learn-more{
+  border: none;
+  border-radius:5rem ;
+
+  margin: 0 auto 3.2rem 3.2rem;
+  padding: 1.6rem 3.2rem; 
+
+  background-color: var(--light-gray);
+
+  cursor: pointer;
+
+  font-family: 'Lexend Deca', sans-serif;;
+  font-weight: 400;
+  
+}
+
+.card-sedans .learn-more{
+  color: var(--orange);
+}
+
+.card-suvs .learn-more{
+  color: var(--dark-cyan);
+}
+
+.card-luxury .learn-more{
+  color: var(--very-dark-cyan);
+}
+
+
+
+footer{
+  grid-area: footer;
+  align-self: end;
+}
+
+
+.attribution {
+  font-size: 1.1rem;
+  color: black;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Active state */
+
+.learn-more:hover{
+  background-color: transparent;
+  color: var(--light-gray);
+  border: 0.2rem solid var(--light-gray);
+}
+
+
+
+/* End of active state */
