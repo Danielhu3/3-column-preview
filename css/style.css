@@ -113,6 +113,9 @@ main{
   color: var(--light-gray);
   margin: 0 auto 3.2rem 3.2rem;
 
+  /* for acessibility */
+  text-transform: uppercase;
+
 }
 
 .card-text{

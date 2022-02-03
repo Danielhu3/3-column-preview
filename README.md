@@ -17,6 +17,18 @@ This is a solution to the [3-column preview card component challenge hub](https:
 - Grid
 - Flexbox
 
+### What I Learned
+
+## Acessibility
+
+- Uppercase text with CSS to made screen readers spell word letter by letter
+
+<img src="screenshots/text-transform.png" alt="Text transform code"/>
+
+- That decorative images should have no `alt =` text and `aria-hidden="true"` to make all web assistive technologies ignore this image
+
+<img src="screenshots/decorative-img.png" alt="Decorative images code"/>
+
 ## 🚀 Starting
 
 To start the project, just open the file `index.html` in your preferred browser.
