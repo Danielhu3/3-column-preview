@@ -108,6 +108,7 @@ main{
 
 .card-title{
   font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2em;
   font-weight: 700;
   color: var(--light-gray);
   margin: 0 auto 3.2rem 3.2rem;
